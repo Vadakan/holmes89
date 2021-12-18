@@ -2,11 +2,11 @@ package handlers_test
 
 import (
 	"encoding/json"
+	"github.com/Vadakan/holmes89/handlers"
 	"net/http"
 	"net/http/httptest"
 	"testing"
 
-	"github.com/Vadakan/holmes89/handlers"
 )
 
 func TestTranslateAPI(t *testing.T) {

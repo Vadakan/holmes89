@@ -1,9 +1,9 @@
 package translation_test
 
 import (
+	"github.com/Vadakan/holmes89/translation"
 	"testing"
 
-	"github.com/Vadakan/holmes89/translation"
 )
 
 func TestTranslate(t *testing.T) {

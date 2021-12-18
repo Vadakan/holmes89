@@ -1,10 +1,11 @@
 package main
 
 import (
+	"github.com/Vadakan/holmes89/handlers"
 	"log"
 	"net/http"
 
-	"github.com/Vadakan/holmes89/handlers"
+
 )
 
 func main() {
