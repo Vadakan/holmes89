@@ -11,5 +11,8 @@
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
+# Exe file planning to get created in the name of exe file
+api
+
 # Dependency directories (remove the comment below to include it)
 # vendor/
