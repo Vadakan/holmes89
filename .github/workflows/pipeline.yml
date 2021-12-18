@@ -7,6 +7,7 @@ on:
     paths:
       - ./**
 jobs:
+  build:
     name: Build App
     runs-on: ubuntu-latest
     steps:
