@@ -23,8 +23,6 @@ jobs:
     steps:
       - name: Check out code into the Go module directory #
         uses: actions/checkout@v2
-        with:
-          go-version: ^1.17
   build:
     name: build
     needs: Checkout
@@ -32,8 +30,6 @@ jobs:
     steps:
       - name: Build the Application
         run: make build #
-        with:
-          go-version: ^1.17
   Archive:
     name: Archive #
     needs: build
