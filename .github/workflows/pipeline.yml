@@ -22,18 +22,18 @@ jobs:
         run: make test
       - name: Coverage Check
         run: make coverage
-            - name: Generate Report
-              run: make report
-            - name: Copy Files
-              run: |
-                mkdir  reports
-                cp cover.html reports/.
+      - name: Generate Report
+        run: make report
+      - name: Copy Files
+        run: |
+              mkdir  reports
+              cp cover.html reports/.
 
-            - name: Archive
-              uses: actions/upload-artifact@v2
-              with:
-                name: reports
-                path: reports
+      - name: Archive
+        uses: actions/upload-artifact@v2
+        with:
+            name: reports
+            path: reports
   build:
     name: Build App
     runs-on: ubuntu-latest #
