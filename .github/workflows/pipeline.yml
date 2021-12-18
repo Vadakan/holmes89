@@ -21,7 +21,7 @@ jobs:
       - name: Run Test
         run: make test
       - name: Coverage Check
-          run: make coverage
+        run: make coverage
             - name: Generate Report
               run: make report
             - name: Copy Files
