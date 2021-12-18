@@ -14,5 +14,9 @@
 # Exe file planning to get created in the name of exe file
 api
 
+#coverage files should not get included
+coverage.out
+cover.html
+
 # Dependency directories (remove the comment below to include it)
 # vendor/
