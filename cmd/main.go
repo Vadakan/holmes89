@@ -27,7 +27,7 @@ func main() {
 			}
 		})
 
-	log.Printf("listening on %s\n", addr)
+	log.Printf("listening on . %s\n", addr)
 
 	log.Fatal(http.ListenAndServe(addr, mux))
 }
