@@ -55,7 +55,12 @@ jobs:
       run: |
            mkdir  artifacts
            cp api artifacts/.
-    - name: Archive #
+  package:
+    name: Archive #
+    runs-on: ubuntu-latest #
+    needs: build
+    steps:
+    - name: Archiving the artificats
       uses: actions/upload-artifact@v2
       with:
           name: api #
