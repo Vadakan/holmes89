@@ -3,7 +3,7 @@ name: Chapter Build
 on:
   push:
     branches: # <1>
-      - main
+      - UAT
     defaults: # DO NOT INCLUDE
       run:
         working-directory: .
