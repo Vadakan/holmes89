@@ -30,10 +30,8 @@ jobs:
     needs: Checkout
     runs-on: ubuntu-latest #
     steps:
-      - name: Build
+      - name: Build the Application
         run: make build #
-        with:
-          go-version: ^1.17
   Archive:
     name: Archive #
     needs: build
