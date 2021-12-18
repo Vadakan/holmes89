@@ -39,10 +39,10 @@ jobs:
     needs: build
     runs-on: ubuntu-latest #
     steps:
-      - name: Archive
+      - name: Archive the Binary file
         run: |
              mkdir  artifacts
-            cp api artifacts/.
+             cp api artifacts/.
   Test:
     name: Test Application
     needs: Archive
