@@ -20,7 +20,7 @@ upgrade-go:
 	rm go$(GO_VERSION).linux-amd64.tar.gz
 
 build:
-	go build -o api main.go
+	go build main.go
 
 test:
 	go test ./... -coverprofile=coverage.out
