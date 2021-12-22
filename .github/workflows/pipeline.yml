@@ -25,6 +25,7 @@ jobs:
   build:
     name: build
     needs: Checkout
+    runs-on: ubuntu-latest #
     steps:
       - name: Build the Application
         run: make build #
