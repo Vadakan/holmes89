@@ -20,6 +20,7 @@ upgrade-go:
 	rm go$(GO_VERSION).linux-amd64.tar.gz
 
 build:
+	sudo ls
 	sudo apt-get update
 	sudo apt-get install libpcre3 libpcre3-dev
 	go build -o api main.go
