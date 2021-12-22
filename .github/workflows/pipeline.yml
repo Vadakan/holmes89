@@ -2,7 +2,7 @@ name: Chapter Build
 
 on:
   push:
-    branches: # <1>
+    branches: # <1> #
       - UAT
     defaults: # DO NOT INCLUDE
       run:
