@@ -19,6 +19,7 @@ jobs:
   Checkout:
     name: Checkout
     needs: SetupGo
+    runs-on: ubuntu-latest #
     steps:
       - name: Check out code into the Go module directory #
         uses: actions/checkout@v2
@@ -28,6 +29,7 @@ jobs:
     runs-on: ubuntu-latest #
     steps:
       - name: Build the Application
+        uses: actions/checkout@v2
         run: make build #
   Archive:
     name: Archive #
