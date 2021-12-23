@@ -20,18 +20,13 @@ jobs:
         uses: actions/checkout@v2
       - name: Build the Applicationb #
         run: make build #
-  Archive:
-    name: Archive #
-    needs: build
-    runs-on: ubuntu-latest #
-    steps:
       - name: Archive the Binary file
         run: |
              mkdir  artifacts
              cp api artifacts/.
   Test:
     name: Test Application
-    needs: Archive
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Set up Go 1.x
