@@ -58,7 +58,7 @@ jobs:
             path: reports
 
   package:
-    name: Archive #
+    name: package #
     runs-on: ubuntu-latest #
     needs: Coverage
     steps:
@@ -69,7 +69,7 @@ jobs:
           path: artifacts
   deliver:
     name: Release
-    needs: Archive
+    needs: package
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
