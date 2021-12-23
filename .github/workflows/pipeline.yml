@@ -18,10 +18,10 @@ jobs:
           go-version: ^1.17
       - name: Check out code into the Go module directory #
         uses: actions/checkout@v2
-      - name: Formatting and vetting #
-        run: make format #
       - name: go linting #
         run: make install-dep
+      - name: Formatting and vetting #
+        run: make format #
       - name: Build the Applicationb #
         run: make build #
       - name: Archive the Binary file
