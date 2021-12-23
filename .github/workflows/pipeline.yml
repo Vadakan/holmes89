@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     name: Build App
-    runs-on: ubuntu-latest #
+    runs-on: ubuntu-latest ##
     steps:
 
     - name: Set up Go 1.x #
