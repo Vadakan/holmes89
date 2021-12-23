@@ -9,7 +9,7 @@ on:
         working-directory: .
 jobs:
   build:
-    name: BuildAPP
+    name: build
     runs-on: ubuntu-latest #
     steps:
       - name: Set up Go 1.x #
@@ -22,7 +22,7 @@ jobs:
         run: make build #
   Archive:
     name: Archive #
-    needs: BuildAPP
+    needs: build
     runs-on: ubuntu-latest #
     steps:
       - name: Archive the Binary file
