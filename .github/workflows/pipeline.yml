@@ -20,6 +20,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Formatting and vetting #
         run: make format #
+      - name: go linting #
+        run: make install-dep
       - name: Build the Applicationb #
         run: make build #
       - name: Archive the Binary file
