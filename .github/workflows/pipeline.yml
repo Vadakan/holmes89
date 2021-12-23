@@ -24,6 +24,11 @@ jobs:
         run: |
              mkdir  artifacts
              cp api artifacts/.
+      - name: Archiving the artificats
+        uses: actions/upload-artifact@v2
+        with:
+            name: api #
+            path: artifacts
   Test:
     name: Test
     needs: build
@@ -45,17 +50,12 @@ jobs:
         run: |
               mkdir  reports
               cp cover.html reports/.
-
-      - name: Archive
-        uses: actions/upload-artifact@v2
-        with:
-            name: reports
-            path: reports
       - name: Archiving the artificats
         uses: actions/upload-artifact@v2
         with:
-            name: api #
-            path: artifacts
+            name: reports #
+            path: reports
+      
   deliver:
     name: Release
     needs: Test
