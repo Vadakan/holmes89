@@ -28,9 +28,8 @@ jobs:
     needs: Checkout
     runs-on: ubuntu-latest #
     steps:
-      - name: Build the Application
-        uses: actions/checkout@v2
-        run: make build #
+      - name: Build the Applicationb #
+        run: go build -o api main.go #
   Archive:
     name: Archive #
     needs: build
@@ -83,3 +82,37 @@ jobs:
       with:
           name: api #
           path: artifacts
+  deliver:
+    name: Release
+    needs: Archive
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Download binary
+      uses: actions/download-artifact@v2
+      with:
+          name: api
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+               Still in experimentation phase
+      draft: true
+      prerelease: true
+    - name: Upload Release Binary
+      uses: actions/upload-release-asset@v1
+      env:
+          GITHUB_TOKEN:
+            ${{ secrets.GITHUB_TOKEN }}
+      with:
+          upload_url:
+            ${{ steps.create_release.outputs.upload_url }}
+      asset_path: api
+      asset_name: api
+      asset_content_type: application/octet-stream
