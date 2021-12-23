@@ -19,6 +19,11 @@ upgrade-go:
 	sudo tar -C /usr/local -xzf go$(GO_VERSION).linux-amd64.tar.gz
 	rm go$(GO_VERSION).linux-amd64.tar.gz
 
+format:
+	go fmt ./...
+	go vet ./...
+	golint ./...
+
 build:
 	go build -o api main.go
 

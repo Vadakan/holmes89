@@ -3,7 +3,6 @@ package translation_test
 import (
 	"github.com/Vadakan/holmes89/translation"
 	"testing"
-
 )
 
 func TestTranslate(t *testing.T) {

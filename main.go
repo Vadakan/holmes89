@@ -4,8 +4,6 @@ import (
 	"github.com/Vadakan/holmes89/handlers"
 	"log"
 	"net/http"
-
-
 )
 
 func main() {
